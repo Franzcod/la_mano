@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "550344986290",
+    "firebase_url": "https://la-mano-991fb.firebaseio.com",
+    "project_id": "la-mano-991fb",
+    "storage_bucket": "la-mano-991fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550344986290:android:4dbda0361df27ea75d03ab",
+        "android_client_info": {
+          "package_name": "com.fpalacios.la_mano"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550344986290-hgu0fgabba1qateaq31amvo74ote6e39.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fpalacios.la_mano",
+            "certificate_hash": "274c56c21719bd94d7642f711616967aee65ad02"
+          }
+        },
+        {
+          "client_id": "550344986290-k2icjdc8bu1bmuk6691mgr2ie488f5es.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQMa4w6c0WRn6Q3cwm9ELeQ3i0miqNcSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550344986290-k2icjdc8bu1bmuk6691mgr2ie488f5es.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
