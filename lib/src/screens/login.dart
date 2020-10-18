@@ -12,8 +12,25 @@ import 'package:la_mano/src/widgets/social_button.dart';
 import 'package:la_mano/src/widgets/textfield.dart';
 import 'package:provider/provider.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key key}) : super(key: key);
+class Login extends StatefulWidget {
+
+  @override
+  _LoginState createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+
+  @override
+  void initState() {
+    final authBloc = Provider.of<AuthBloc>(context, listen: false);
+    authBloc.user.listen((user) {
+      if(user != null){
+        Navigator.pushReplacementNamed(context, '/landing');
+      } 
+    });
+    super.initState();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -120,7 +137,14 @@ class Login extends StatelessWidget {
                   StreamBuilder<bool>(
                     stream: authBloc.isValid,
                     builder: (context, snapshot) {
-                      return AppButton(buttonText: 'Inicio', buttonType: (snapshot.data == true) ?  ButtonType.LightBlue : ButtonType.Disabled);
+                      return AppButton(
+                        buttonText: 'Inicio', 
+                        onPressed: authBloc.loginEmail,
+                        buttonType: (snapshot.data == true) 
+                          ? ButtonType.LightBlue 
+                          : ButtonType.Disabled,
+                       
+                      );
                     }
                   ),
                 ],
@@ -171,11 +195,6 @@ class Login extends StatelessWidget {
         ),
     );
   }
-
-
-
- 
-
 }
 
 

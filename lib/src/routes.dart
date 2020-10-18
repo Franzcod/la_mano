@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:la_mano/src/screens/landing.dart';
 import 'package:la_mano/src/screens/login.dart';
 import 'package:la_mano/src/screens/signup.dart';
+import 'package:la_mano/src/screens/vendor.dart';
 
 abstract class Routes{
 
   static MaterialPageRoute materialRoutes(RouteSettings settings){
     switch (settings.name) {
-      case "/":
+      case "/landing":
         return MaterialPageRoute(builder: (context) => Landing());
       
       case "/signup":
@@ -17,6 +18,9 @@ abstract class Routes{
       case "/login":
         return MaterialPageRoute(builder: (context) => Login());
 
+      case "/vendor":
+        return MaterialPageRoute(builder: (context) => Vendor());
+
       default:
         return MaterialPageRoute(builder: (context) => Login());
     }
@@ -24,7 +28,7 @@ abstract class Routes{
 
   static CupertinoPageRoute cupertinoRoutes(RouteSettings settings){
     switch (settings.name) {
-      case "/":
+      case "/landing":
         return CupertinoPageRoute(builder: (context) => Landing());
       
       case "/signup":
@@ -32,6 +36,9 @@ abstract class Routes{
 
       case "/login":
         return CupertinoPageRoute(builder: (context) => Login());
+
+      case "/vendor":
+        return CupertinoPageRoute(builder: (context) => Vendor());
 
       default:
         return CupertinoPageRoute(builder: (context) => Login());

@@ -11,6 +11,21 @@ abstract class TextStyles{
       textStyle: TextStyle(color: AppColors.darkgray, fontSize: 16));
   }
 
+  static TextStyle get title{
+    return GoogleFonts.poppins(
+      textStyle: TextStyle(color: AppColors.darkblue, fontWeight: FontWeight.bold, fontSize: 40));
+  }
+
+  static TextStyle get navTitle{
+    return GoogleFonts.poppins(
+      textStyle: TextStyle(color: AppColors.darkblue, fontWeight: FontWeight.bold));
+  }
+
+  static TextStyle get navTitleMaterial{
+    return GoogleFonts.poppins(
+      textStyle: TextStyle(color: AppColors.straw, fontWeight: FontWeight.bold));
+  }
+
   static TextStyle get link{
     return GoogleFonts.roboto(
       textStyle: TextStyle(color: AppColors.lightblue, fontSize: 18, fontWeight: FontWeight.bold));
